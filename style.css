@@ -187,6 +187,28 @@ main {
   outline: 0;
   color: #fff;
 }
+.search-input.active {
+  transform: scaleY(1);
+}
+.search-form {
+  display: flex;
+  align-items: center;
+}
+.search-form input {
+  height: 50%;
+  width: 100%;
+  font-size: 1rem;
+  padding: 5px;
+  color: white;
+  background: transparent;
+  border: 1px solid grey;
+  outline: 0;
+  margin-right: 5px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: 0.3s;
+  display: none;
+}
 .ads {
   margin-bottom: 20px;
   border: 1px solid white;
@@ -412,9 +434,11 @@ footer a {
       "content1"
       "footer";
   }
+
   .sidebar {
     display: none;
   }
+
   nav {
     position: sticky;
     top: 0;
@@ -424,12 +448,19 @@ footer a {
   .logo {
     width: 100px;
     margin-right: 0;
+    display: none;
   }
   .menu-toggle {
     display: flex;
     cursor: pointer;
   }
   .search-icon img {
+    display: flex;
+  }
+  .search-form {
+    transform: scaleX(1);
+  }
+  .search-form input {
     display: flex;
   }
   .mid-nav {
